@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conversor de Temperatura</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1e1e2f;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #2a2a40;
+      padding: 30px;
+      border-radius: 15px;
+      width: 350px;
+      box-shadow: 0 0 15px #00000060;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #4caf50;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    .resultado {
+      background: #3a3a5a;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .historico {
+      margin-top: 20px;
+      max-height: 120px;
+      overflow-y: auto;
+      background: #1e1e2f;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .historico p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #444;
+      padding-bottom: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Conversor de Temperatura</h1>
+    <label for="valor">Temperatura:</label>
+    <input type="number" id="valor" placeholder="Digite a temperatura" />
+
+    <label for="de">De:</label>
+    <select id="de">
+      <option value="celsius">Celsius</option>
+      <option value="fahrenheit">Fahrenheit</option>
+      <option value="kelvin">Kelvin</option>
+    </select>
+
+    <label for="para">Para:</label>
+    <select id="para">
+      <option value="fahrenheit">Fahrenheit</option>
+      <option value="celsius">Celsius</option>
+      <option value="kelvin">Kelvin</option>
+    </select>
+
+    <button id="converter">Converter</button>
+    <div class="resultado" id="resultado">Resultado: </div>
+
+    <div class="historico" id="historico">
+      <strong>Histórico:</strong>
+    </div>
+
+    <button id="limpar">Limpar Histórico</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
